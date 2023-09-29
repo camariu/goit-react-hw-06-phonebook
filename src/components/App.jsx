@@ -13,6 +13,7 @@ export default function App() {
       <AddContacts></AddContacts>
       <Filter></Filter>
       <ContactsList></ContactsList>
+      
     </div>
   );
 }
