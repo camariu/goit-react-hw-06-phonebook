@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { deleteContact } from 'components/redux/phoneSlice';
+import { deleteContact } from '../redux/phoneSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function ContactsList() {
@@ -12,9 +12,10 @@ export default function ContactsList() {
   };
 
   return (
-    <ul>
+ 
+    <ul >
       {contacts.map(contact => (
-        <li>
+        <li  key={contact.id}>
           {contact.name} - {contact.number}
           <button onClick={() => handleDeleteContacts(contact.id)}>
             Sterge
@@ -22,5 +23,6 @@ export default function ContactsList() {
         </li>
       ))}
     </ul>
+   
   );
 }

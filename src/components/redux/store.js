@@ -1,13 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import phoneSlice from "./phoneSlice";
-import { filterReducer } from "./filterSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import phoneSlice from '../redux/phoneSlice';
 
-const store = configureStore ({
-    reducer:{
-        phonebook: phoneSlice,
-        filter: filterReducer
-
-    },
+const store = configureStore({
+  reducer: {
+    phonebook: phoneSlice,
+  },
 });
 
-export default store
+export default store;
