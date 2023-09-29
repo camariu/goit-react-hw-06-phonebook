@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'components/redux/phoneSlice';
 import { nanoid } from 'nanoid';
 import {  saveContactLocalStorage} from 'components/redux/phoneSlice';
+import style from "./AddContacts.module.css"
 
 
 
@@ -35,10 +36,13 @@ export default function AddContacts() {
   },[contacts])
 
   return (
-    <div>
+    <div className={style.addContact}>
+      <div className={style.addContactForm}>
       <form onSubmit={handleSubmit}>
         <h3>Name</h3>
         <input
+        placeholder='Please insert your name'
+          maxlength="10"
           type="text"
           name="name"
           pattern="^[a-zA-Z]+(([' -][a-zA-Z ])?[a-zA-Z]*)*$"
@@ -46,8 +50,10 @@ export default function AddContacts() {
           required
           onChange={handleNameChange}
         />
-        <h3>Number</h3>
+        <h4>Number phone</h4>
         <input
+            placeholder='Please insert your number'
+            maxlength="15"
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -55,8 +61,9 @@ export default function AddContacts() {
           required
           onChange={handleNumberChange}
         />
-        <button type="submit">Add Contact</button>
+       <button type="submit">Add Contact</button>
       </form>
+      </div>
     </div>
   );
 }

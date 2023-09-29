@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
 import AddContacts from './AddContacts/AddContacts';
 import ContactsList from './ContactsList/ContactsList';
-
+import Filter from './Filter/Filter';
+import style from "../App.module.css"
 
 export default function App() {
+ 
 
-
-
+  
   return (
-    <div>
+    <div className={style.phoneBook}>
       <AddContacts></AddContacts>
-      <ContactsList ></ContactsList>
+      <Filter></Filter>
+      <ContactsList></ContactsList>
     </div>
-  )
+  );
 }
