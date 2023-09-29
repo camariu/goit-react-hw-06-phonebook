@@ -37,7 +37,7 @@
   align-items: center;
   border-bottom: 1px solid rgb(0, 0, 0);
   width: auto;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
  
@@ -124,7 +124,7 @@
       font-size: 20px;  
     }
   
-  
+   
   
     .deleteButton {
       padding: 5px 15px;  
